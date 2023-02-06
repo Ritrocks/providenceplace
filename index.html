@@ -9,7 +9,7 @@
                 margin: 0;
                 padding: 0;
             }
-            .text {
+            #text {
                 position:fixed;
                 bottom: 45%;
                 left:57%;
@@ -36,7 +36,7 @@
                height:50%;
                z-index:2;
             }
-            .text:hover .popup{
+            #text:hover .popup{
                 display:block;
             }
             .button{
@@ -56,19 +56,22 @@
         </style>
     </head>
     <body>
+        <audio id="audioID">
+            <source src="oh no no no.mp3" type="audio/mp3">
+        </audio>
         <img class= "image" src="fire exit.png">
-        <div class="text">
+        <div id="text";>
             <p style="font-size:30px; font-family:arial;">
                 Exit
             </p>
-            <div class="popup">
+            <div class="popup"; onmouseover="yes()";>
                 <h1>
                     Leaving so soon? &#9785
                 </h1>
                 <p style="font-size: 200%;">
-                    Please stay a little longer
-                    We will make you happy
-                    We are a happy family
+                    Please stay a little longer <br>
+                    We will make you happy <br>
+                    We are a happy family <br>
                     Happy Happy
                 </p>
                 <div class="button">
@@ -81,5 +84,11 @@
                 </div>
             </div>
         </div>
+        <script>    
+            var audio = document.getElementById("audioID");
+            function yes() {
+                audio.play();
+            }
+            </script>
     </body>
 </html>
